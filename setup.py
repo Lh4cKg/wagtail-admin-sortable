@@ -45,13 +45,8 @@ setup(
         'Framework :: Django :: 2.0',
         'Framework :: Django :: 2.1',
         'Framework :: Django :: 2.2',
-        'Framework :: Wagtail CMS :: 1.8',
-        'Framework :: Wagtail CMS :: 1.9',
-        'Framework :: Wagtail CMS :: 2.0',
-        'Framework :: Wagtail CMS :: 2.1',
-        'Framework :: Wagtail CMS :: 2.2',
-        'Framework :: Wagtail CMS :: 2.3',
-        'Framework :: Wagtail CMS :: 2.4',
+        'Framework :: Wagtail :: 1',
+        'Framework :: Wagtail :: 2',
     ],
     install_requires=[
         'wagtail>=1.8'
