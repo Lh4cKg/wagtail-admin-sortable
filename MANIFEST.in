@@ -1,0 +1,7 @@
+include README.md
+include setup.py
+recursive-include wagtail_adminsortable *.py
+recursive-include wagtail_adminsortable/locale *
+recursive-include wagtail_adminsortable/static *
+recursive-include wagtail_adminsortable/templates *
+recursive-exclude * *.pyc
