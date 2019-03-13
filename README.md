@@ -1,6 +1,26 @@
 # wagtail-admin-sortable
 Generic drag-and-drop ordering for objects in the Wagtail admin interface
 
+### Quick Start
+
+Install **wagtail_adminsortable**
+
+```bash
+$ pip install wagtail_adminsortable
+
+```    
+
+Add ``wagtail_adminsortable`` to ``INSTALLED_APPS`` in ``settings.py`` for your Django project:
+
+```python
+INSTALLED_APPS = [
+  ...
+  'wagtail_adminsortable',
+]
+
+```
+
+
 ##### Integrate your models
 
 ```python
