@@ -13,6 +13,7 @@ def sortable_result_list(context):
     """
     Displays the headers and data list together
     """
+    request = context['request']
     view = context['view']
     object_list = context['object_list']
     headers = list(result_headers(view))
@@ -23,7 +24,7 @@ def sortable_result_list(context):
     context.update({
         'result_headers': headers,
         'num_sorted_fields': num_sorted_fields,
-        'results': list(results(view, object_list))})
+        'results': list(results(view, object_list, request))})
     return context
 
 
