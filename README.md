@@ -1,25 +1,32 @@
 # wagtail-admin-sortable
+
 Generic drag-and-drop ordering for objects in the Wagtail admin interface
 
 ### Quick Start
 
-Install **wagtail_adminsortable**
+Install **wagtail_adminsortable** via PyPi
 
 ```bash
 $ pip install wagtail_adminsortable
+```
 
-```    
+or via Github for latest version
 
-Add ``wagtail_adminsortable`` to ``INSTALLED_APPS`` in ``settings.py`` for your Django project:
+```bash
+$ pip install git+https://github.com/Lh4cKg/wagtail-admin-sortable
+
+```
+
+Add `wagtail_adminsortable` and `wagtail.contrib.modeladmin,` to `INSTALLED_APPS` in `settings.py` for your Django project:
 
 ```python
 INSTALLED_APPS = [
   ...
+  'wagtail.contrib.modeladmin',
   'wagtail_adminsortable',
 ]
 
 ```
-
 
 ##### Integrate your models
 
@@ -37,7 +44,7 @@ class Category(AdminSortable, ClusterableModel):
         verbose_name_plural = "Categories"
 ```
 
-##### or 
+##### or
 
 ```python
 from django.db import models
@@ -62,17 +69,18 @@ ORDERING_FIELD = 'my_order'
 
 ##### Integrate into a list view
 
-###### In wagtail_hooks.py, add a mixin class to augment the functionality for sorting (be sure to put the mixin class before ModelAdmin):
+###### In wagtail_hooks.py (in your app directory), add a mixin class to augment the functionality for sorting (be sure to put the mixin class before ModelAdmin):
 
 ```python
-from wagtail.contrib.modeladmin.options import ModelAdmin
+from wagtail.contrib.modeladmin.options import ModelAdmin, modeladmin_register
 from wagtail_adminsortable.admin import SortableAdminMixin
 
 
 class CategoryAdmin(SortableAdminMixin, ModelAdmin):
-    pass
-```
+    model = YourModel
 
+modeladmin_register(CategoryAdmin)
+```
 
 ##### License
 
