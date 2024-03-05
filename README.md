@@ -65,7 +65,7 @@ ORDERING_FIELD = 'my_order'
 ###### In wagtail_hooks.py, add a mixin class to augment the functionality for sorting (be sure to put the mixin class before ModelAdmin):
 
 ```python
-from wagtail.contrib.modeladmin.options import ModelAdmin
+from wagtail_modeladmin.options import ModelAdmin
 from wagtail_adminsortable.admin import SortableAdminMixin
 
 

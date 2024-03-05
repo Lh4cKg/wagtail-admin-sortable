@@ -2,7 +2,7 @@ from django.template import Library
 from django.forms.utils import flatatt
 from django.utils.safestring import mark_safe
 from django.contrib.admin.templatetags.admin_list import result_headers
-from wagtail.contrib.modeladmin.templatetags.modeladmin_tags import results
+from wagtail_modeladmin.templatetags.modeladmin_tags import results
 
 register = Library()
 
