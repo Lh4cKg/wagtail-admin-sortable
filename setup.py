@@ -38,7 +38,8 @@ setup(
         'Framework :: Wagtail',
     ],
     install_requires=[
-        'wagtail>=2.15.0'
+        "wagtail>=6",
+        "wagtail-modeladmin",
     ],
     packages=find_packages(exclude=['example', 'docs']),
     include_package_data=True,
