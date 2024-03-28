@@ -1,5 +1,5 @@
 from django.views.generic import FormView
-from wagtail.contrib.modeladmin.views import IndexView
+from wagtail_modeladmin.views import IndexView
 
 from .forms import SortableForm
 from .mixins import AjaxableResponseMixin
